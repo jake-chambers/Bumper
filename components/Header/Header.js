@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
-export default function Navbar() {
+export default function Header() {
     return (
         <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
+            <Text style = {styles.title}>Bumper</Text>
         </View>
     );
 }
@@ -12,10 +13,16 @@ export default function Navbar() {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'blue',
-        height: 100,
         display: 'flex',
+        flex: 0.2,
         justifyContent: 'center',
         alignItems: 'center',
-        width: '90%',
     },
+
+    title: {
+        position: 'relative',
+        top: '12%',
+        fontSize: responsiveFontSize(6),
+        color: 'white',
+    }
 });
