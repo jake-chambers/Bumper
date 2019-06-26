@@ -1,21 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-const NavbarItem = () => (
-    <View style = {styles.words}>
-        <Text style={styles.position}>Item</Text>
+const NavbarItem = (props) => (
+    <View style = {styles.position}>
+        <Text style={styles.words}>{props.name}</Text>
     </View>
 );
 
 const styles = StyleSheet.create({
     position: {
-        backgroundColor: 'yellow',
+        backgroundColor: 'white',
         display: 'flex',
-        // alignItems: 'center',
-        height: '50%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        flex: 1,
+        height: '100%',
+        borderStyle: 'solid',
+        borderColor: 'gray',
+        borderWidth: 1,
     },
+
     words: {
-        backgroundColor: 'green'
+        backgroundColor: 'white',
+        padding: '10%',
+        position: 'relative',
+
     }
 });
 
