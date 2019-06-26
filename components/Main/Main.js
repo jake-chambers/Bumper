@@ -6,12 +6,6 @@ export default class Main extends React.Component {
         return (
             <View style={styles.container}>
                 <Text>Main</Text>
-                <Button
-                    title="Add some friends"
-                    onPress={() =>
-                        this.props.navigation.navigate('Test')
-                    }
-                />
             </View>
         );
     }

@@ -1,15 +1,20 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import Main from './components/Main/Main';
-import Test from './components/Test/Test';
+import Profile from './components/Profile/Profile';
+import Settings from './components/Settings/Settings';
 
-const AppNavigator = createStackNavigator({
-    Main: { 
-        screen: Main, 
+
+const AppNavigator = createStackNavigator( 
+    {
+        Main: Main,
+        Settings: Settings,
+        Profile: Profile
     },
-    Test: {
-        screen: Test,
+    {
+        initialRouteName: 'Main',
+        headerMode: 'none'
     }
-});
+);
 
 const Container = createAppContainer(AppNavigator);
 

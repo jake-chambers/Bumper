@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     title: {
         position: 'relative',
         top: '12%',
-        fontSize: responsiveFontSize(6),
+        fontSize: responsiveFontSize(5),
         color: 'white',
     }
 });
