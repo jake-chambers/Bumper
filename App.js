@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import Navbar from './components/Navbar/Navbar'
+import Header from './components//Header/Header.js'
 
 import Container from './AppNavigator';
 
@@ -8,6 +9,7 @@ import Container from './AppNavigator';
 export default function App() {
   return (
     <View style={styles.container}>
+      <Header></Header>
       <Container />
     </View>
 

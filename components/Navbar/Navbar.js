@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import {Icon} from 'react-native-elements'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { withNavigation } from 'react-navigation';
+
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
@@ -116,4 +116,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default withNavigation(Navbar);
+export default Navbar;
