@@ -55,12 +55,19 @@ class Navbar extends React.Component {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.view}>
-                    <TouchableOpacity onPress={() => this.selected('map')} style={[styles.item, styles.middle, { backgroundColor: this.state.mapOpen ? '#e6fcff' : 'white' }]}>
+                    <TouchableOpacity onPress={() => {
+                        this.selected('map');
+                        this.props.navigation.navigate('Main')
+                    }
+                        } style={[styles.item, styles.middle, { backgroundColor: this.state.mapOpen ? '#e6fcff' : 'white' }]}>
                         <Icon iconStyle={styles.icon} name="map-pin" type="feather" size={33} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.view}>
-                    <TouchableOpacity onPress={() => this.selected('settings')} style={[styles.item, { backgroundColor: this.state.settingsOpen ? '#e6fcff' : 'white' }]}>
+                    <TouchableOpacity onPress={() => {
+                        this.selected('settings');
+                        this.props.navigation.navigate('Settings')
+                        }} style={[styles.item, { backgroundColor: this.state.settingsOpen ? '#e6fcff' : 'white' }]}>
                         <Icon iconStyle = {styles.icon} name="settings" type="feather" size={33} />
                     </TouchableOpacity>
                 </View>

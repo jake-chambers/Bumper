@@ -3,7 +3,7 @@ import Main from './components/Main/Main';
 import Profile from './components/Profile/Profile';
 import Settings from './components/Settings/Settings';
 import Navbar from './components/Navbar/Navbar';
-
+import Content from './components/Content/Content';
 
 const AppNavigator = createStackNavigator( 
     {
