@@ -1,15 +1,13 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 import React from 'react';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
-import { NavigationEvents } from 'react-navigation'
+import SubHeader from '../Header/SubHeader'
 
 export default class Profile extends React.Component {
-
-
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.header}>Profile</Text>
+                <SubHeader heading="Profile"></SubHeader>
             </View>
         );
     }
