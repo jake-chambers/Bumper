@@ -1,37 +1,66 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-
 import {Icon} from 'react-native-elements'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-export default class Navbar extends React.Component {
+import { withNavigation } from 'react-navigation';
+class Navbar extends React.Component {
     constructor(props) {
         super(props);
+        this.selected = this.selected.bind(this);
         this.state = {
             settingsOpen: false,
             profileOpen: false,
-            routesOpen: false
+            mapOpen: false
         };
     }
 
-    selectNavItem(){
+     selected (button){
+        if (button == 'profile'){
+            this.setState(
+                {profileOpen: !this.state.profileOpen,
+                settingsOpen: false,
+                mapOpen: false
+    
+                })
+        }
 
+        else if (button == 'settings'){
+            this.setState({ 
+                settingsOpen: !this.state.settingsOpen,
+                mapOpen: false,
+                profileOpen: false
+            })
+        }
+
+        else if (button == 'map'){
+            this.setState({ 
+                mapOpen: !this.state.mapOpen,
+                settingsOpen: false,
+                profileOpen: false,
+            })
+        }
     }
+
     render() {
 
         return (
             <View style={styles.container}>
                 <View style={styles.view}>
-                    <TouchableOpacity style={styles.item}>
+                    <TouchableOpacity 
+                    onPress={() => {
+                    this.selected('profile');
+                    this.props.navigation.navigate('Profile')
+                    }} style={[styles.item, { backgroundColor: this.state.profileOpen ? '#e6fcff' : 'white'}]}>
                         <Icon iconStyle={styles.icon} name = "user" type = "antdesign" size = {31}/>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.view}>
-                    <TouchableOpacity style={[styles.item,styles.middle]} class = 'middle'>
+                    <TouchableOpacity onPress={() => this.selected('map')} style={[styles.item, styles.middle, { backgroundColor: this.state.mapOpen ? '#e6fcff' : 'white' }]}>
                         <Icon iconStyle={styles.icon} name="map-pin" type="feather" size={33} />
                     </TouchableOpacity>
                 </View>
                 <View style={styles.view}>
-                    <TouchableOpacity style={styles.item}>
+                    <TouchableOpacity onPress={() => this.selected('settings')} style={[styles.item, { backgroundColor: this.state.settingsOpen ? '#e6fcff' : 'white' }]}>
                         <Icon iconStyle = {styles.icon} name="settings" type="feather" size={33} />
                     </TouchableOpacity>
                 </View>
@@ -43,10 +72,13 @@ export default class Navbar extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 0.1,
+        width: '100%',
         backgroundColor: 'gray',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderTopColor: '#5faeba',
+        borderTopWidth: StyleSheet.hairlineWidth,
     },
 
     view: {
@@ -65,12 +97,16 @@ const styles = StyleSheet.create({
 
     icon:{
         position: 'relative', 
-        bottom: 5
+        bottom: 5,
+        color: '#5faeba'
     },
     middle: {
-        borderRightColor: 'gray',
-        borderLeftColor: 'gray',
-        borderLeftWidth: 1,
-        borderRightWidth: 1,
+        borderRightColor: '#5faeba',
+        borderLeftColor: '#5faeba',
+        borderLeftWidth: StyleSheet.hairlineWidth,
+        borderRightWidth: StyleSheet.hairlineWidth,
     }
 });
+
+
+export default withNavigation(Navbar);

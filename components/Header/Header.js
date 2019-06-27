@@ -12,17 +12,21 @@ export default function Header() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'blue',
+        backgroundColor: '#e6fcff',
         display: 'flex',
         flex: 0.2,
         justifyContent: 'center',
         alignItems: 'center',
+        shadowOffset: { width: 0.1, height: 0.1 },
+        shadowColor: 'gray',
+        shadowOpacity: 0.5,
+        zIndex: 999,  
     },
 
     title: {
         position: 'relative',
         top: '12%',
         fontSize: responsiveFontSize(5),
-        color: 'white',
+        color: '#5faeba',
     }
 });
