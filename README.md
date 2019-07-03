@@ -1,17 +1,16 @@
-![ScreenShot](bumper.jpg)
+![ScreenShot](bumper.pdf)
 
 # Bumper
 
 ## Table of Contents
 + [About](#about)
 + [Getting Started](#getting_started)
-+ [Usage](#usage)
 
 ## About <a name = "about"></a>
-Write about 1-2 paragraphs describing the purpose of your project.
+Every morning I wake up 40 minutes earlier than when I have to actually wake up. I do this because I need to make sure there isn't traffic on my commute to work, which is painful because I have to enter my route into Google Maps. The idea for this app is to have a simple interface to refresh common routes, and have quick realtime traffic data display so that this process is simplified. Unfortunately there is no free API that provides end-to-end ETA's while taking traffic into consideration, so I'm currently trying to figure out a workaround. Stay tuned.
 
 ## Getting Started <a name = "getting_started"></a>
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
