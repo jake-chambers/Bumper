@@ -1,4 +1,4 @@
-![ScreenShot](bumper.pdf)
+![ScreenShot](bumper.png)
 
 # Bumper
 
