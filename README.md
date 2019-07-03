@@ -1,15 +1,4 @@
-
-<br />
-<p align="center">
-    <img src="./bumper.pdf" alt="Logo" width="80" height="80">
-
-  <h3 align="center">Bumper</h3>
-  </p>
-</p>
-
-
-
-
+![ScreenShot](bumper.jpg)
 
 # Bumper
 
