@@ -1,3 +1,16 @@
+
+<br />
+<p align="center">
+    <img src="./bumper.pdf" alt="Logo" width="80" height="80">
+
+  <h3 align="center">Bumper</h3>
+  </p>
+</p>
+
+
+
+
+
 # Bumper
 
 ## Table of Contents
@@ -19,5 +32,3 @@ Make sure you have npm installed as well as expo. Then run:
 npm install
 expo start
 ```
-
-![uh-oh :(](http://bumper.pdf)
